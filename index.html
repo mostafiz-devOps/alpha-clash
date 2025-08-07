@@ -6,11 +6,11 @@
     <title>Alpha Clash</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-poppins">
     <main
@@ -27,8 +27,14 @@
       <section class="play-ground">
         <div>
           <div>
-            <div class="artboard artboard-horizontal phone-6">1024×320</div>
+            <!--Play Ground-->
+            <div
+              class="artboard artboard-horizontal phone-6 border-[12px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]"
+            >
+              1024×320
+            </div>
           </div>
+          <!-- Keyboard Layout -->
           <div>
             <div class="my-1 flex w-full justify-center gap-1">
               <kbd class="kbd">q</kbd>
@@ -63,6 +69,19 @@
               <kbd class="kbd">m</kbd>
               <kbd class="kbd">/</kbd>
             </div>
+          </div>
+          <!-- Score and Timer -->
+          <div>
+            <button class="btn btn-secondary">
+              Life
+              <img src="images/heart.svg" alt="">
+              <span>1</span>
+            </button>
+            <button class="btn btn-active btn-accent">
+              Score
+              <img src="images/dollar.svg" alt="">
+              <span>0</span>
+            </button>
           </div>
         </div>
       </section>
