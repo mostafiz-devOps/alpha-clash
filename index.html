@@ -18,22 +18,27 @@
       class="bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center"
     >
       <section
-        class="home text-white flex flex-col items-center justify-center h-screen gap-3 hidden"
+        class="home text-white flex flex-col items-center justify-center h-screen gap-3"
       >
         <h1 class="text-8xl font-anton uppercase">Alpha Clash pro</h1>
         <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-        <button class="btn btn-primary">Play Now</button>
+        <button class="btn bg-gray-400">Play Now</button>
       </section>
-      <section class="play-ground">
-        <div>
-          <div>
             <!--Play Ground-->
+      <section class="play-ground hidden">
+        <div class="flex flex-col items-center justify-center h-screen gap-3">
+          <div>
             <div
               class="artboard artboard-horizontal phone-6 border-[12px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]"
             >
-             <div class="flex justify-center">
-              <p class="bg-[#2F2941]">Don't watch keyboard  while playing...</p>
-             </div>
+              <div class="flex justify-center">
+                <p class="bg-[#2F2941] text-white px-3 pb-2 rounded-b-xl">
+                  Don't watch keyboard while playing...
+                </p>
+              </div>
+              <div class="flex justify-center items-center h-full">
+                <p class="text-black text-8xl font-bold">Y</p>
+              </div>
             </div>
           </div>
           <!-- Keyboard Layout -->
@@ -73,21 +78,31 @@
             </div>
           </div>
           <!-- Score and Timer -->
-          <div>
+          <div class ="flex justify-between w-3/4">
             <button class="btn btn-secondary">
               Life
-              <img src="images/heart.svg" alt="">
+              <img src="images/heart.svg" alt="" />
               <span>1</span>
             </button>
             <button class="btn btn-active btn-accent">
               Score
-              <img src="images/dollar.svg" alt="">
+              <img src="images/dollar.svg" alt="" />
               <span>0</span>
             </button>
           </div>
         </div>
       </section>
-      <section class="score"></section>
+      <!-- Game Over Section -->
+      <section class="flex flex-col items-center justify-center h-screen hidden">
+        <div class="flex flex-col items-center justify-center w-80 h-64 gap-2 bg-[#FFFFFF33] rounded-2xl">
+          <h1>
+            <span class="text-white text-4xl font-bold">Score :</span>
+            <span class="text-white text-4xl">14</span>
+          </h1>
+          <button class="btn bg-white text-black">Play Again</button>
+          <p class="text-white">Practice will make you Pro</p>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
