@@ -14,3 +14,7 @@
 //     scoreSection.classList.remove('hidden');
 //   }
 // }
+function togglePlayGround() {
+    hideElement("home");
+    showElement("play-ground");
+}

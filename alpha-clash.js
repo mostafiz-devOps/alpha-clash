@@ -1,7 +1,10 @@
-function togglePlayGround() {
-  const playHome = document.getElementById("home");
-  playHome.classList.add("hidden");
 
-  const playGround = document.getElementById("play-ground");
+function hideElement(element) {
+  const playHome = document.getElementById(element);
+  playHome.classList.add("hidden");
+}
+
+function showElement(element) {
+  const playGround = document.getElementById(element);
   playGround.classList.remove("hidden");
 }
