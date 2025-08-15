@@ -14,7 +14,19 @@
 //     scoreSection.classList.remove('hidden');
 //   }
 // }
+function continueGame() {
+    // Generate random alphabet.
+    const alphabet = generateRandomAlphabet();
+    console.log("Random Alphabet:", alphabet);
+    const alphabetElement = document.getElementById("random-alphabet");
+    alphabetElement.innerText = alphabet;
+
+    // Set the keyboard background color
+    setKeyboardBgmColor(alphabet.toLowerCase());
+}
+
 function togglePlay() {
     hideElement("home");
     showElement("play-ground");
+    continueGame();
 }
