@@ -19,5 +19,5 @@ function generateRandomAlphabet() {
 // set the keyboard bgm color
 function setKeyboardBgmColor(elementId) {
   const element = document.getElementById(elementId);
-  element.classList.add("bg-orange-400");
+  element.classList.add("bg-orange-500");
 }
