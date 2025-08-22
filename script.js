@@ -16,16 +16,17 @@
 
 function keyPress(event) {
   const pressedKey = event.key;
-  console.log("pressed Key:", pressedKey);
 
   const currentKey = document.getElementById("random-alphabet");
   const currentKeyText = currentKey.innerText.toLowerCase();
-  console.log(currentKeyText, pressedKey);
 
   if (pressedKey === currentKeyText) {
-    console.log("Correct Key Pressed!");
+    console.log("You got a point!");
+    const currentScore = document.getElementById("score");
+    const score = parseInt(currentScore.innerText) + 1;
+    currentScore.innerText = score;
     
-    resetKeyboardBgmColor(currentKeyText);
+    resetKeyboardBgmColor(pressedKey);
     continueGame();
   } else {
     console.log("Incorrect Key Pressed!");
@@ -38,8 +39,8 @@ function continueGame() {
   const alphabet = generateRandomAlphabet();
   const alphabetElement = document.getElementById("random-alphabet");
   alphabetElement.innerText = alphabet;
-    // Set the keyboard background color
-    setKeyboardBgmColor(alphabet.toLowerCase());
+  // Set the keyboard background color
+  setKeyboardBgmColor(alphabet.toLowerCase());
 }
 
 function togglePlay() {
