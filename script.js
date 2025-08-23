@@ -28,8 +28,17 @@ function keyPress(event) {
     
     resetKeyboardBgmColor(pressedKey);
     continueGame();
+
   } else {
     console.log("Incorrect Key Pressed!");
+    const currentLife = document.getElementById("life");
+    const life = parseInt(currentLife.innerText) - 1;
+    currentLife.innerText = life;
+
+    if (life <= 0) {
+      gameOver("score-section");
+      hideElement("play-ground");
+    }
   }
 }
 document.addEventListener("keyup", keyPress);
@@ -46,5 +55,6 @@ function continueGame() {
 function togglePlay() {
   hideElement("home");
   showElement("play-ground");
+  gameOver("score-section");
   continueGame();
 }
