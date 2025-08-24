@@ -10,9 +10,11 @@ function showElement(element) {
   playGround.classList.remove("hidden");
 }
 
-function gameOver(element) {
-  const scoreSection = document.getElementById(element);
-  scoreSection.classList.remove("hidden");
+function gameOver() {
+  hideElement("play-ground");
+  showElement("score-section");
+  const lastScore = getElementValue("score");
+  setElementValue("final-score", lastScore);
 }
 
 function getElementValue(elementId) {

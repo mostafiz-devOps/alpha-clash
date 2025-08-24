@@ -17,6 +17,14 @@
 function keyPress(event) {
   const pressedKey = event.key;
 
+  // stop game if you want
+  if (pressedKey === "Escape") {
+    hideElement("play-ground");
+    showElement("home");
+    resetKeyboardBgmColor(document.getElementById("random-alphabet").innerText.toLowerCase());
+    return;
+  }
+
   const currentKey = document.getElementById("random-alphabet");
   const currentKeyText = currentKey.innerText.toLowerCase();
 
@@ -36,8 +44,8 @@ function keyPress(event) {
     currentLife.innerText = life;
 
     if (life <= 0) {
-      gameOver("score-section");
-      hideElement("play-ground");
+      gameOver();
+      resetKeyboardBgmColor(currentKeyText);
     }
   }
 }
