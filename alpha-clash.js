@@ -15,6 +15,17 @@ function gameOver(element) {
   scoreSection.classList.remove("hidden");
 }
 
+function getElementValue(elementId) {
+  const element = document.getElementById(elementId);
+  const elementValue = element.innerText;
+  const value = parseInt(elementValue);
+  return value;
+}
+function setElementValue(elementId, value) {
+  const setElement = document.getElementById(elementId);
+  setElement.innerText = value;
+}
+
 function generateRandomAlphabet() {
   // Generate random alphabet.
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

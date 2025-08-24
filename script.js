@@ -54,7 +54,11 @@ function continueGame() {
 
 function togglePlay() {
   hideElement("home");
+  hideElement("score-section");
   showElement("play-ground");
-  gameOver("score-section");
+
+  setElementValue("life", 5);
+  setElementValue("score", 0);
+
   continueGame();
 }
